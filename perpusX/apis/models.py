@@ -23,6 +23,7 @@ class Pengarang(models.Model):
     return self.nama
 
 class Anggota(models.Model):
+  anggotaId = models.AutoField(primary_key=True)
   nama = models.CharField(max_length=255)
   alamat = models.CharField(max_length=255)
   nomor_telepon = models.CharField(max_length=255)
@@ -33,6 +34,7 @@ class Anggota(models.Model):
     return self.nama
 
 class Buku(models.Model):
+  bukuId = models.AutoField(primary_key=True)
   judul = models.CharField(max_length=255)
   penulis = models.ForeignKey(Pengarang, on_delete=models.CASCADE)
   penerbit = models.ForeignKey(Penerbit, on_delete=models.CASCADE)

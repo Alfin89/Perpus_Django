@@ -6,10 +6,10 @@ cover = serializers.ImageField(required=False)
 class BukuSerializer(serializers.ModelSerializer):
     class Meta:
         model = Buku
-        fields = ('judul','penulis', 'penerbit', 'rak', 'cover', 'jumlah')
+        fields = ('bukuId','judul','penulis', 'penerbit', 'rak', 'cover', 'jumlah')
 
 
 class AnggotaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Anggota
-        fields = ('nama','alamat', 'nomor_telepon', 'fakultas', 'email')
+        fields = ('anggotaId','nama','alamat', 'nomor_telepon', 'fakultas', 'email')
