@@ -22,16 +22,6 @@ class Pengarang(models.Model):
   def __str__(self):
     return self.nama
 
-class Anggota(models.Model):
-  nama = models.CharField(max_length=255)
-  alamat = models.CharField(max_length=255)
-  nomor_telepon = models.CharField(max_length=255)
-  fakultas = models.CharField(max_length=255)
-  email = models.CharField(max_length=255)
-
-  def __str__(self):
-    return self.nama
-
 class Buku(models.Model):
   judul = models.CharField(max_length=255)
   penulis = models.ForeignKey(Pengarang, on_delete=models.CASCADE)
