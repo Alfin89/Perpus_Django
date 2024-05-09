@@ -34,6 +34,27 @@
             padding: 0;
             list-style: none;
         }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        a {
+            color: blue;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        a:hover {
+            color: #0056b3;
+        }
     </style>
 </head>
 <body>
@@ -46,6 +67,33 @@
     <div class="container">
         <h1>Selamat Datang di API Perpustakaan Sumber Terbuka</h1>
         <p>Ini adalah API sumber terbuka untuk mengelola sumber daya perpustakaan.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Endpoint</th>
+                    <th>URL</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Daftar Rak Buku</td>
+                    <td><a href="http://127.0.0.1:8000/api/rakbuku/">/api/rakbuku/</a></td>
+                </tr>
+                <tr>
+                    <td>Daftar Penerbit</td>
+                    <td><a href="http://127.0.0.1:8000/api/penerbit/">/api/penerbit/</a></td>
+                </tr>
+                <tr>
+                    <td>Daftar Pengarang</td>
+                    <td><a href="http://127.0.0.1:8000/api/pengarang/">/api/pengarang/</a></td>
+                </tr>
+                <tr>
+                    <td>Daftar Buku</td>
+                    <td><a href="http://127.0.0.1:8000/api/buku/">/api/buku/</a></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </body>
 </html>
