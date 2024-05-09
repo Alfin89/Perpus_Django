@@ -1,3 +1,6 @@
 from django.contrib import admin
+from .models import Anggota
 
-# Register your models here.
+@admin.register(Anggota)
+class AnggotaAdmin(admin.ModelAdmin):
+    list_display = ['nama', 'alamat', 'nomor_telepon', 'fakultas', 'email']
